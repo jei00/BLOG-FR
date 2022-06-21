@@ -1,173 +1,67 @@
 html {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 12px;
     line-height: 1.6;
-    border-bottom: 0cm chocolate;
-    border-style:double;
 }
 
 body {
-    background-color: rgb(179, 244, 244);
-        table-layout: fixed;
-        width: 100%;
-        border: 4px solid rgb(255, 177, 75);
-        border-collapse: collapse;
+    background-color: antiquewhite;
+    border: 0.5cm;
+    border-color: rgb(248, 124, 35);
+    border-color: black;
+    border-style:double ;
+    border-width:5cm;
 }
-body.grid {
-    margin: 0 auto;
-    width: 80vw;
-    height: 100vh;
-    display: grid;
-    gap: 10px;
-}
+
 .title {
-    color: rgb(11, 8, 8);
-}
-li{
-    table-layout: auto;
-    padding: .5em 2em;
-    background-color: antiquewhite;
-    list-style-type: none;
-    text-decoration: none;
-    color: rgb(201, 183, 183);
-}
-
-menu a:hover {
-    background-color: brown;
-    color: antiquewhite;
-}
-
-thead {
-    background-color: burlywood;
-}
-
-thead th:nth-child(1) {
-    width: 20%;
-}
-
-thead th:nth-child(2) {
-    width: 20%;
-}
-
-thead th:nth-child(3) {
-    width: 60%;
-}
-
-caption {
-    font-size: 2rem;
-    font-weight: 500;
-    background-color: antiquewhite;
-    border: 2px solid gray;
-}
-
-tbody td {
-    text-align: center;
-}
-
-tbody tr:hover {
-    background-color: darkkhaki;
-    cursor: pointer;
-}
-main{
-    color: rgb(0, 16, 96);
-    table-layout: auto;
-    tab-size: 2cm;
-    font-size: medium;
-    font-weight: 200;
-    font-style: oblique;
-    table-layout: fixed;
-    width: 100%;
-    border: 2px solid rgb(53, 206, 61);
-    border-collapse: collapse;
-    padding: 20px;
-    border-bottom: 2px solid rgb(53, 204, 101);
-    
-}
-
-p {
-    font-family:Georgia, Times, 'Times New Roman', serif,;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(55, 132, 0);
+    font-size: xx-large;
 }
 
 h1 {
-    font-style: var(12px);
-    font-weight: bolder;
-    color:rgb(151, 0, 0);
-   
+    text-transform: uppercase;
+    color: burlywood;
+    font-size: 20pt;
+    
 }
+
+header h1 {
+    text-align: center;
+}
+
 h2{
-    text-transform:capitalize ;
-    text-transform:capitalize;
-    text-decoration:solid;
-    text-decoration-color: rgb(4, 14, 26);
-    text-decoration-line: overline;
-    color:rgb(0, 97, 176);
-
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
 }
 
-@media screen and (min-width: 800px) {
-    .grid{
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr 5fr 1fr;
-        grid-template-areas:
-        "header header"
-        "navbar content"
-        "footer footer";
-    }
-    .navbar{
-        flex-direction: column;
-    }
+h3{
+    font-style: oblique;
+    color: coral;
+    text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-    .grid{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 5fr 1fr;
-        grid-template-areas:
-        "header"
-        "navbar"
-        "content"
-        "footer";
-    }
-    .navbar{
-        align-items: center;
-        flex-direction: row;
-    }
+main{
+    font-size: 11pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style-type: none;
+    color: brown;
+    text-transform: capitalize;
 }
 
-.grid {
-    margin: 0 auto;
-    width: 80vw;
-    height: 100vh;
-    display: grid;
-    gap: 10px;
+post-list a {
+    color: lightcoral;
 }
 
-.header {
-    grid-area: header;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    /* allinea sull'asse secondario*/
-    justify-content: space-around;
-    background-color: aqua;
-}
-
-.navbar {
-    grid-area: navbar;
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    background-color: aliceblue;
-
-}
-
-.content {
-    grid-area: content;
-    background-color: aquamarine;
-}
-
-body.footer {
-    grid-area: footer;
-    background-color: gainsboro;
+/* per richiamarlo in PostList <button> scrivere class="button" */
+.button {
+    background-color: burlywood; 
+    border-color: lightcoral;
+    color: whitesmoke;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 16px;
 }
