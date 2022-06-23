@@ -17,10 +17,10 @@ export default class Home extends HTMLElement{
             <section class="hero">
                 <div class="hero-body">
                 <p class="title">
-                    Blog App di esempio
+                    Blog App
                 </p>
                 <p class="subtitle">
-                    Sviluppata con lit-html, vaadin-router, bulma.io e web-components
+                    news, sport, salute, economia
                 </p>
                 </div>
             </section>
