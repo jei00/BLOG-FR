@@ -1,5 +1,4 @@
 import { html, render } from "./lib/lit-html.js";
-import { router } from "./lib/vaadin-router.js";
 import { router } from "./index.js";
 import { findPost } from "./postStore.js"
 
@@ -12,31 +11,34 @@ export default class PostView extends HTMLElement {
     getRoot() {
         return this;
     }
-
     connectedCallback() {
-        const { location } = router;
-        this.id = location.params.idpost ;
-        render(this.renderView(), this.getRoot());
-        if (this.idpost == "undefined") {
-            console.log("create..")
-            this.idpost = {
-                title:'',
-                content:''
-            }
-            render(this.renderView(), this.getRoot());
-        } else {
-            findPost(this.idpost)
-                .then(idpost => {
-                    this.idpost = idpost;
-                    render(this.renderView(), this.getRoot());
-                })
-        }
-    }
+        this.loadAndRenderPosts();
 
+    }
+    loadAndRenderPosts(){
+        const {location} = router;
+        this.id = location.params.idpost;
+        console.log(this.id);
+
+        fetch(`http://127.0.0.1:5000/${this.id}`)
+        .then(resp=> {
+            if(resp.status != 200){
+                console.log("Staus Error", resp.status);
+                throw new Error("Fetch Bad Status");
+            }
+            return resp.json()
+        })
+        .then(data=> {
+            this.data= data;
+            render(this.renderView(),this.getRoot());
+        })
+    }
     renderView() {
         return html`
-            <h1><a href="/posts/"> ${post.idpost} | ${post.title}</a></h1>
-            <div> ${post.category} | ${post.content} | ${post.created}</div> 
+            <h1> ${this.data.idpost} | ${this.data.title}</h1>
+            <div> ${this.data.category} | ${this.data.created}</div> 
+            <p> ${this.data.content} </p>
+            <div class="boxpost"></div>
         `;
     }
 }

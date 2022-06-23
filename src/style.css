@@ -13,13 +13,13 @@ body {
     border-width:1ch;
 }
 .home{
-    font-size: xx-large;
+    font-display: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-bottom:10mm;
     color: blue;
 
 }
-.title {
+.title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(25, 0, 127);
     font-size: xx-large;
@@ -29,7 +29,7 @@ body {
 h1 {
     font-size:60px;
     text-align:center;
-    color: red;
+    color: rgb(241, 161, 75);
 
 }
 h2{
@@ -40,6 +40,9 @@ h3{
     font-style: oblique;
     color: rgb(249, 190, 169);
     text-align: center;
+}
+p{
+    color: rgb(180, 6, 6);
 }
 #container {
     width: 20%;
@@ -80,8 +83,18 @@ main{
     height: 1000px;
     width: 1410px;
     margin: 50px, auto;
-    padding: 50px;
+    padding: 157px;
     background-image: url(copertinablog2.png);
+    background-color: black;
+    border-color: aliceblue;
+    block-size: auto;
+}
+.boxpost{
+    height: 1000px;
+    width: 1410px;
+    margin: 50px, auto;
+    padding: 150px;
+    background-image: url(postit.png);
     background-color: black;
     border-color: aliceblue;
     block-size: auto;

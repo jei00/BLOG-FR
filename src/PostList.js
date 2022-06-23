@@ -1,4 +1,5 @@
 import { html,render } from "./lib/lit-html.js";
+import { Router } from "./lib/vaadin-router.js";
 
 export default class PostList extends HTMLElement {
 
@@ -34,7 +35,7 @@ export default class PostList extends HTMLElement {
 
     onEdit(e, id) {
         e.preventDefault();
-        Router.go(`/posts${id}`)
+        Router.go(`/editpost/${id}`)
     }
 
     onDelete(e, id) {
@@ -45,6 +46,7 @@ export default class PostList extends HTMLElement {
         })
         
     }
+
 
     renderView() {
         return html`
@@ -58,7 +60,7 @@ export default class PostList extends HTMLElement {
     renderPost(post){
         return html`
            <h1><a href="/posts/${post.id}"> ${post.title}</a></h1>
-           <div>${post.created} | ${post.category} | <button class="button">Edit</button><button class="button">Delete</button><button @click = ${e => this.onCreate(e)} class="button">crea</button></div> 
+           <div>${post.created} | ${post.category} | <button class="button" @click = ${e=> this.onEdit(e, post.id)}>Edit</button><button class="button" @onclick=${e=> this.onDelete(e)}>Delete</button></div> 
        `;
     }
 }

@@ -17,7 +17,7 @@ export default class Home extends HTMLElement{
             <section class="hero">
                 <div class="hero-body">
                 <p class="title">
-                    Blog App
+                    Blog di post
                 </p>
                 <p class="subtitle">
                     news, sport, salute, economia

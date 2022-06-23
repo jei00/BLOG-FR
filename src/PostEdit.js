@@ -15,7 +15,8 @@ export default class PostEdit extends HTMLElement {
 
     connectedCallback() {
         const { location } = router;
-        this.id = location.params.post ;
+        this.id = location.params.idpost ;
+        console.log(this.id);
         if (this.id == "undefined") {
             console.log("create..")
             this.data = {
