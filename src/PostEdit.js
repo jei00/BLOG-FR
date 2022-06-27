@@ -2,6 +2,7 @@ import { html, render } from "./lib/lit-html.js";
 import { Router } from "./lib/vaadin-router.js";
 import { router } from "./index.js";
 import { findPost, updatePost, createPost } from "./postStore.js";
+import PostList from "./PostList.js";
 
 export default class PostEdit extends HTMLElement {
 
@@ -87,10 +88,10 @@ export default class PostEdit extends HTMLElement {
          
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link" @click = ${e => this.onSave(e)}>Save</button>
+                        <button class="button is-link" @click = ${e => this.onSave(e)}> Save </button>
                     </div>
                     <div class="control">
-                        <button class="button is-link is-light" @click = ${e => this.onCancel(e)}>Cancel</button>
+                        <button class="button is-link is-light" @click = ${e => this.onCancel(e)}> Cancel </button>
                     </div>
                 </div>
            </form>

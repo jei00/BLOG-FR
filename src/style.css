@@ -16,12 +16,12 @@ body {
     font-display: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-bottom:10mm;
-    color: blue;
+    color: rgb(227, 130, 65);
 
 }
 .title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(25, 0, 127);
+    color: rgb(180, 26, 2);
     font-size: xx-large;
     background-origin: padding-box;
 }
@@ -34,11 +34,11 @@ h1 {
 }
 h2{
     font-size:40px;
-    color: #87CEFA
+    color: #f39e6a
 }
 h3{
     font-style: oblique;
-    color: rgb(249, 190, 169);
+    color: rgb(255, 134, 90);
     text-align: center;
 }
 p{
@@ -102,8 +102,8 @@ main{
 
 /* per richiamarlo in PostList <button> scrivere class="button" */
 .button {
-    background-color: rgb(76, 235, 230); 
-    border-color: rgb(70, 100, 253);
+    background-color: rgb(175, 15, 0); 
+    border-color: rgb(255, 255, 255);
     color: rgb(9, 8, 1);
     padding: 5px 10px;
     text-align: center;

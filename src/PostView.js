@@ -20,7 +20,7 @@ export default class PostView extends HTMLElement {
         this.id = location.params.idpost;
         console.log(this.id);
 
-        fetch(`http://127.0.0.1:5000/${this.id}`)
+        fetch(`http://127.0.0.1:5000/posts/${this.id}`)
         .then(resp=> {
             if(resp.status != 200){
                 console.log("Staus Error", resp.status);

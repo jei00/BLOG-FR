@@ -12,7 +12,8 @@ const findPost = async (postId) => {
 }
 
 const updatePost = async (postId, data) => {
-    const resp = await fetch(`${url}/${postId}`, {
+    const resp = await fetch(`${configData.baseurl}/edit/${postId}`, 
+    {
         method: 'PATCH', 
         mode: 'cors', 
         cache: 'no-cache', 

@@ -8,6 +8,7 @@ import {Router } from "./lib/vaadin-router.js";
 const outlet = document.querySelector('main');
 const router = new Router(outlet);
 
+/*collegamento router */
 router.setRoutes([
     {path: '/',     component: 'blog-home'},
     {path: '/posts',     component: 'post-list'},
