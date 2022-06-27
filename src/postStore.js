@@ -11,8 +11,8 @@ const findPost = async (postId) => {
     return resp.json();
 }
 
-const updatePost = async (postId, data) => {
-    const resp = await fetch(`${configData.baseurl}/edit/${postId}`, 
+const updatePost = async (id, data) => {
+    const resp = await fetch(`${configData.baseurl}/editpost/${id}`, 
     {
         method: 'PATCH', 
         mode: 'cors', 
