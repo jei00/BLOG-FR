@@ -20,7 +20,13 @@ export default class Home extends HTMLElement{
                     Blog di post
                 </p>
                 <p class="subtitle">
-                    news, sport, salute, economia
+                    ELENCO DEGLI ARGOMENTI TRATTATI:
+                <ul style = "list-style-type:disc;">
+                <li> News </li>
+                <li> Sport </li>
+                <li> Economia </li>
+                <li> Salute </li>
+                </ul>
                 </p>
                 </div>
             </section>
